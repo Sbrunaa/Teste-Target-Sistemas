@@ -1,0 +1,14 @@
+function isFibonacci(num) {
+    let a = 0, b = 1, temp;
+    
+    while (b < num) {
+        temp = a + b;
+        a = b;
+        b = temp;
+    }
+    
+    return b === num || num === 0;
+}
+
+let numero = 21; // Pode substituir pelo valor desejado
+console.log(`O número ${numero} ${isFibonacci(numero) ? "pertence" : "não pertence"} à sequência de Fibonacci.`);
